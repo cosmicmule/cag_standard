@@ -1,0 +1,11 @@
+{
+    "adName":       "CAGrown_yr2_Social_Online",
+    "jobNumber":    "002957_01",
+    "width":        "300",
+    "height":       "250",
+    "paths": {
+        "output":    "output",
+        "deploy":   "deploy",
+        "temp":     "temp"
+    }
+}

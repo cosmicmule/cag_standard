@@ -1,0 +1,687 @@
+    html,body{
+        margin:0;padding:0;
+    }
+
+    #ad {
+        position:absolute;
+        left:0;
+        top:0;
+        width: @adWidth;
+        height: @adHeight;
+        display: block;
+        user-select: none;
+
+
+            #banner{
+                position:absolute;
+                top:0;
+                left:0;
+                width:(@adWidth - 2);
+                height:(@adHeight - 2);
+                overflow:hidden;
+
+                #border{
+                  position:absolute;
+                  top:    0;
+                  left:   0;
+                  width:  288px;
+                  height: 238px;
+                  border: 5px solid white;
+                }
+
+                #border_outer{
+                  position:absolute;
+                  top:    0;
+                  left:   0;
+                  width:  296px;
+                  height: 246px;
+                  border: 1px solid black;
+                  z-index: 999;
+                }
+
+                #bolts{
+                  position:absolute;
+                  top:    0;
+                  left:   0;
+                  width:  296px;
+                  height: 246px;
+                  border: 1px solid red;
+
+                  #bolts_1_left{
+                    position: absolute;
+                    top: 113px;
+                    left: 15px;
+                    width: 36px;
+                    height: 31px;
+                    background: url(../images/sprite.png) 0 -120px no-repeat;
+                    opacity: 0;
+                  }
+
+                  #bolts_1_right{
+                    position: absolute;
+                    top: 113px;
+                    left: 250px;
+                    width: 36px;
+                    height: 31px;
+                    background: url(../images/sprite.png) 0 -152px no-repeat;
+                    opacity: 0;
+                  }
+
+
+                  #bolts_2_left{
+                    position: absolute;
+                    top: 62px;
+                    left: 149px;
+                    width: 56px;
+                    height: 51px;
+                    background: url(../images/sprite.png) -42px -130px no-repeat;
+                    opacity: 0;
+                    transform: rotate(90deg);
+                  }
+
+                  #bolts_2_right{
+                    position: absolute;
+                    top: 122px;
+                    left: 86px;
+                    width: 56px;
+                    height: 51px;
+                    background: url(../images/sprite.png) -42px -130px no-repeat;
+                    opacity: 0;
+                    transform: rotate(90deg);
+                  }
+
+                  #bolts_3_left{
+                    position: absolute;
+                    top: 66px;
+                    left: 86px;
+                    width: 56px;
+                    height: 51px;
+                    background: url(../images/sprite.png) -42px -130px no-repeat;
+                    opacity: 0;
+                    transform: rotate(177deg);
+                  }
+
+                  #bolts_3_right{
+                    position: absolute;
+                    top: 124px;
+                    left: 153px;
+                    width: 56px;
+                    height: 51px;
+                    background: url(../images/sprite.png) -42px -130px no-repeat;
+                    opacity: 0;
+                    transform: rotate(177deg);
+                  }
+
+                }
+
+                #backgroundWrappers{
+                    position:absolute;
+                    top: 0px;
+                    left:0;
+                    width:(@adWidth - 2);
+                    height:(@adHeight - 2);
+                    overflow: hidden;
+
+                    /* image 1*/
+                    #image_1{
+                      position:     inherit;
+                      top:          inherit;
+                      left:         inherit;
+                      width:        inherit;
+                      height:       inherit;
+                      background:   url(../images/img1.jpg);
+                      transform: scale(1.25);
+                    }
+
+                    /* image 2 mask */
+                    #image_2_mask{
+                      position:     inherit;
+                      top:          inherit;
+                      left:         0;
+                      width:        0;
+                      height:       inherit;
+                      overflow:     hidden;
+
+
+                      #image_2{
+                        position:   inherit;
+                        top:        inherit;
+                        left:       0;
+                        width:      inherit;
+                        height:     inherit;
+                        background: url(../images/img2.jpg) 0 0;
+                      }
+
+
+                    }
+                    /* image 3 mask */
+                    #image_3_mask{
+                      position:     inherit;
+                      top:          inherit;
+                      right:        -2px;
+                      width:        0;
+                      height:       inherit;
+                      overflow:     hidden;
+
+                      #image_3{
+                        position:   inherit;
+                        top:        inherit;
+                        right:       0;
+                        width:      inherit;
+                        height:     inherit;
+                        background: url(../images/img2.jpg) -150px 0;
+                      }
+
+
+                    }
+                    /* image 4 mask */
+                    #image_4_mask{
+                      position:     inherit;
+                      top:          inherit;
+                      right:        -1px;
+                      width:        0;
+                      height:       inherit;
+                      overflow:     hidden;
+
+                      #image_4{
+                        position:   inherit;
+                        top:        inherit;
+                        right:       0;
+                        width:      inherit;
+                        height:     inherit;
+                        background: url(../images/img2.jpg) -300px 0;
+                        opacity:    1;
+                      }
+
+                    }
+                    /* image 4 mask */
+                    #image_4b_mask{
+                      position:     inherit;
+                      top:          inherit;
+                      left:         0;
+                      width:        0;
+                      height:       inherit;
+                      overflow:     hidden;
+
+
+                      #image_1b{
+                        position:   inherit;
+                        top:        inherit;
+                        left:       0;
+                        width:      inherit;
+                        height:     inherit;
+                        background: url(../images/img1.jpg) 0 0;
+                        opacity:    1;
+                      }
+
+                    }
+                    /* image 5 */
+                    #image_5_mask{
+                      position:     inherit;
+                      top:          inherit;
+                      right:        0px;
+                      width:        0;
+                      height:       inherit;
+                      overflow:     hidden;
+
+                      #image_5{
+                        position:   fixed;
+                        top:        inherit;
+                        left:       -5px;
+                        width:      inherit;
+                        height:     inherit;
+                        opacity:    0;
+                        background: url(../images/img3.jpg);
+                      }
+                    }
+
+                    #image_6{
+                      position:   inherit;
+                      top:        inherit;
+                      left:       0;
+                      width:      inherit;
+                      height:     inherit;
+                      background: url(../images/img2.jpg) -299px 0;
+                      opacity:    0;
+                    }
+
+                    #image_6_darken{
+                      position:   inherit;
+                      top:        inherit;
+                      left:       0;
+                      width:      inherit;
+                      height:     inherit;
+                      background: black;
+                      opacity:    0;
+                    }
+
+
+
+                }
+
+                #title_holder{
+                  position:   inherit;
+                  top:        inherit;
+                  left:       20px;
+                  width:      258px;
+                  height:     inherit;
+                  opacity:    1;
+                  overflow:   hidden;
+
+
+                  #title_1{
+                    position:   inherit;
+                    top:        109px;
+                    left:       12px;
+                    width:      235px;
+                    height:     51px;
+                    background: black;
+                    overflow:   hidden;
+                    opacity:    0;
+                    background: url(../images/title_1.jpg);
+                  }
+
+                  #title_left_mask{
+                    position:   inherit;
+                    top:        inherit;
+                    left:       0px;
+                    width:      130px;
+                    height:     inherit;
+                    opacity:    1;
+                    overflow:   hidden;
+
+                    #title_2{
+                      position:   inherit;
+                      top:        69px;
+                      left:       0px;
+                      width:      130px;
+                      height:     51px;
+                      background: black;
+                      overflow:   hidden;
+                      background: url(../images/title_2.jpg);
+                      opacity:    0;
+                    }
+
+                    #title_4{
+                      position:   inherit;
+                      top:        121px;
+                      left:       0;
+                      width:      130px;
+                      height:     51px;
+                      background: black;
+                      overflow:   hidden;
+                      background: url(../images/title_4.jpg);
+                      opacity:    0;
+                    }
+
+                    #title_6{
+                      position:   inherit;
+                      top:        109px;
+                      left:       40px;
+                      width:      130px;
+                      height:     51px;
+                      background: black;
+                      overflow:   hidden;
+                      background: url(../images/title_6.jpg);
+                      opacity:    0;
+                    }
+
+
+                  }
+
+                  #title_right_mask{
+                    position:   inherit;
+                    top:        inherit;
+                    right:       0px;
+                    width:      129px;
+                    height:     inherit;
+                    overflow:   hidden;
+
+                    #title_3{
+                      position:   inherit;
+                      top:        120px;
+                      left:       0px;
+                      width:      130px;
+                      height:     51px;
+                      background: black;
+                      overflow:   hidden;
+                      opacity:    0;
+                      background: url(../images/title_3.jpg);
+                    }
+
+                    #title_5{
+                      position:   inherit;
+                      top:        70px;
+                      left:       0px;
+                      width:      130px;
+                      height:     51px;
+                      background: black;
+                      overflow:   hidden;
+                      opacity:    0;
+                      background: url(../images/title_5.jpg);
+                    }
+
+                    #title_7{
+                      position:   inherit;
+                      top:        159px;
+                      left:       0px;
+                      width:      130px;
+                      height:     51px;
+                      background: black;
+                      opacity:    0;
+                      overflow:   hidden;
+                      background: url(../images/title_7.jpg) no-repeat;
+                    }
+                  }
+                }
+
+                #super{
+                    position:   inherit;
+                    top:        102px;
+                    left:       40px;
+                    width:      250px;
+                    height:     13px;
+                    background: url(../images/sprite.png) no-repeat;
+                    opacity: 0;
+                }
+
+                #super1{
+                    position:   inherit;
+                    top: 118px;
+                    left: 34px;
+                    width: 250px;
+                    height: 48px;
+                    background: url(../images/sprite.png) 0 -16px  no-repeat;
+                    opacity: 0;
+
+                    #label{
+                      position: inherit;
+                      top: 13px;
+                      left: 0px;
+                      width: 250px;
+                      height: 23px;
+                      background: url(../images/sprite.png) 0 -219px no-repeat;
+                    }
+                }
+
+                #super1_over{
+                    position:   inherit;
+                    top: 120px;
+                    left: 32px;
+                    width: 250px;
+                    height: 36px;
+                    background: url(../images/sprite.png) 2px -182px  no-repeat;
+                    opacity: 0;
+                }
+
+                #logo{
+                    position:   inherit;
+                    top: 188px;
+                    left: 150px;
+                    width: 250px;
+                    height: 48px;
+                    background: url(../images/sprite.png) 0 -68px no-repeat;
+                    opacity: 0;
+                }
+
+
+
+                // banner elements END
+
+                // animation - keyframes
+                &.MC_animation_endFrame{
+                  & .rollover{
+                    animation-name: rollover;
+                    animation-duration: 1s;
+                    animation-delay:0s;
+                    animation-fill-mode: forwards;
+                  }
+
+                  & .rollover_reverse{
+                    animation-name: rollover_reverse;
+                    animation-duration: .5s;
+                    animation-delay:0s;
+                    animation-fill-mode: forwards;
+                  }
+                }
+
+                &.MC_animation_playing{
+
+                    // animation Keyframes on specific elements go below.
+
+                        // frame 1 img1_scaler
+                        & .rollover{
+                          animation-name: rollover;
+                          animation-duration: 4s;
+                          animation-delay:0.2s;
+                          animation-fill-mode: forwards;
+                        }
+
+                        & #image_1{
+                          animation-name: img1_scaler;
+                          animation-duration: 4s;
+                          animation-delay:0.2s;
+                          animation-fill-mode: forwards;
+                        }
+
+                        & #title_1{
+                          animation-name: title_1_seq,fadeOut_100;
+                          animation-duration: .75s;
+                          animation-delay:0.2s,2.5s;
+                          animation-fill-mode: forwards;
+                        }
+
+                        & #bolts_1_left{
+                          animation-name: bolt_1_Scaler,fadeOut_100;
+                          animation-duration: .75s;
+                          animation-delay:0.2s,2.5s;
+                          animation-fill-mode: forwards;
+                        }
+
+                        & #bolts_1_right{
+                          animation-name: bolt_1_Scaler,fadeOut_100;
+                          animation-duration: .75s;
+                          animation-delay:0.2s,2.5s;
+                          animation-fill-mode: forwards;
+                        }
+
+                        // frame 2
+                        & #image_2_mask{
+                            animation-name: swipLeft,fadeOut_100;
+                            animation-duration: 1s;
+                            animation-delay:2.2s,5.5s;
+                            animation-fill-mode: forwards;
+                        }
+
+                        & #image_3_mask{
+                            animation-name: swipRight;
+                            animation-duration: 1s;
+                            animation-delay:2.2s;
+                            animation-fill-mode: forwards;
+                        }
+
+                        & #title_2{
+                          animation-name: title_generic_left_seq,fadeOut_100;
+                          animation-duration: .75s;
+                          animation-delay:3.2s,5.5s;;
+                          animation-fill-mode: forwards;
+                        }
+
+                      // frame 3
+                        & #title_3{
+                          animation-name: title_generic_right_seq,fadeOut_100;
+                          animation-duration: .75s;
+                          animation-delay:3.5s,5.5s;
+                          animation-fill-mode: forwards;
+                        }
+
+                        & #bolts_2_right{
+                          animation-name: bolt_2_Scaler,fadeOut_100;
+                          animation-duration: .75s;
+                          animation-delay:3.8s,5.5s;
+                          animation-fill-mode: forwards;
+                        }
+
+                        & #bolts_2_left{
+                          animation-name: bolt_2_Scaler,fadeOut_100;
+                          animation-duration: .75s;
+                          animation-delay:3.2s,5.5s;
+                          animation-fill-mode: forwards;
+                        }
+
+                        // frame 4
+                        & #image_4_mask{
+                            animation-name: swipRight_opacity;
+                            animation-duration: 1s;
+                            animation-delay:5.2s;
+                            animation-fill-mode: forwards;
+                        }
+
+                        & #image_4b_mask{
+                            animation-name: swipRight;
+                            animation-duration: 1s;
+                            animation-delay:5.2s;
+                            animation-fill-mode: forwards;
+                        }
+
+                        & #title_4{
+                          animation-name: title_generic_left_seq,fadeOut_100;
+                          animation-duration: .75s;
+                          animation-delay:6.2s,8s;
+                          animation-fill-mode: forwards;
+                        }
+
+                        & #title_5{
+                          animation-name: title_generic_right_seq,fadeOut_100;
+                          animation-duration: .75s;
+                          animation-delay:6.5s,8s;
+                          animation-fill-mode: forwards;
+                        }
+
+                        & #bolts_3_left{
+                          animation-name: bolt_1_Scaler,fadeOut_100;
+                          animation-duration: .75s;
+                          animation-delay:6.4s,8s;
+                          animation-fill-mode: forwards;
+                        }
+
+                        & #bolts_3_right{
+                          animation-name: bolt_1_Scaler,fadeOut_100;
+                          animation-duration: .75s;
+                          animation-delay:6.8s,8s;
+                          animation-fill-mode: forwards;
+                        }
+
+
+                        // frame 5
+                        & #image_5{
+                            animation-name: fadeIn_100;
+                            animation-duration: 0.2s;
+                            animation-delay:8s;
+                            animation-fill-mode: forwards;
+                        }
+
+                        & #image_5_mask{
+                            animation-name: swipRight_full;
+                            animation-duration: 1s;
+                            animation-delay:8.2s;
+                            animation-fill-mode: forwards;
+                        }
+
+                        & #title_6{
+                          animation-name: title_generic_left_seq,fadeOut_100;
+                          animation-duration: .75s;
+                          animation-delay:9.5s,12.5s;
+                          animation-fill-mode: forwards;
+                        }
+
+                        & #title_7{
+                          animation-name: title_generic_right_seq,fadeOut_100;
+                          animation-duration: .75s;
+                          animation-delay:9.8s,12.5s;
+                          animation-fill-mode: forwards;
+                        }
+
+
+
+
+                        & #image_4_mask{
+                            animation-name: swipRight;
+                            animation-duration: 1s;
+                            animation-delay:5s;
+                            animation-fill-mode: forwards;
+                        }
+
+                        & #image_5{
+                            animation-name: swipRight_full,moveRight;
+                            animation-duration: 1s;
+                            animation-delay:9s,12.5s;
+                            animation-fill-mode: forwards;
+                        }
+
+                        & #image_6{
+                            animation-name: swipLeft_opacity;
+                            animation-duration: 1s;
+                            animation-delay:12.5s;
+                            animation-fill-mode: forwards;
+                        }
+
+                        & #image_6_darken{
+                            animation-name: darken;
+                            animation-duration: 1s;
+                            animation-delay:13.2s;
+                            animation-fill-mode: forwards;
+                        }
+
+                        & #super{
+                            animation-name: title_1_seq;
+                            animation-duration: 1s;
+                            animation-delay:13.5s;
+                            animation-fill-mode: forwards;
+                        }
+
+                        & #super1{
+                            animation-name: title_1_seq;
+                            animation-duration: 1s;
+                            animation-delay:13.8s;
+                            animation-fill-mode: forwards;
+                        }
+
+                        & #logo{
+                            animation-name: title_1_seq;
+                            animation-duration: 1s;
+                            animation-delay:14.2s;
+                            animation-fill-mode: forwards;
+                        }
+
+
+
+
+                    // ENDS
+
+                }
+
+                &.MC_animation_endFrame{
+                    // add your default state for your elements here.
+                    //when the banner is completed will add this to banner to create your end-frame
+                    #logo,#super,#super1,#image_6_darken,#image_6,#image_5{opacity:1}
+                    #image_1{opacity: 0}
+                    #backgroundWrappers #image_6{width: 150px; opacity: 1}
+                    #image_5{ width: 240px !important; opacity: 1 !important; left: 55px !important}
+                    #backgroundWrappers #image_6_darken{opacity: .4}
+                    // ENDS
+                }
+
+
+
+             // banner
+            }
+
+    // ad
+    }
+
+
+    // Global Variables
+    @import "libs/MC_variables.less";
+    // Global KeyFrames
+    @import "libs/MC_keyframes.less";
